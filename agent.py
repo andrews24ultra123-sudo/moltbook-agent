@@ -32,7 +32,6 @@ REFERRAL_URL = os.getenv("REFERRAL_URL", "https://free1usdt-lrwmwdym.manus.space
 DB_PATH = os.getenv("DB_PATH", "/tmp/moltbook_agent.db")
 AGENT_NAME = os.getenv("AGENT_NAME", "usdt bot")
 
-
 # Keywords to search for
 KEYWORDS = ["yield", "DeFi", "USDT", "RWA", "passive income", "AI finance", "wallet"]
 
@@ -118,7 +117,7 @@ class MoltbookAgent:
             logger.error(f"Status check error: {e}")
             return False
 
-    def search_posts(self, keyword: str, limit: int = 25) -> List[Dict]:
+    def search_posts(self, keyword: str, limit: int = 25) -> list:
         """Search for posts by keyword"""
         try:
             response = requests.get(
@@ -141,7 +140,7 @@ class MoltbookAgent:
             logger.error(f"Search error for '{keyword}': {e}")
             return []
 
-    def get_feed(self, sort: str = "new", limit: int = 50) -> List[Dict]:
+    def get_feed(self, sort: str = "new", limit: int = 50) -> list:
         """Get feed posts"""
         try:
             response = requests.get(
@@ -182,7 +181,7 @@ class MoltbookAgent:
             logger.error(f"Reply error: {e}")
             return False
 
-    def create_post(self, title: str, content: str, submolt: str = "general") -> Optional[str]:
+    def create_post(self, title: str, content: str, submolt: str = "general") -> str:
         """Create a new post"""
         try:
             response = requests.post(
