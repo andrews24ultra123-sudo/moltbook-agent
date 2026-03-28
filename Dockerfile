@@ -1,7 +1,6 @@
 FROM python:3.11-slim
 WORKDIR /app
-COPY requirements.txt .
+COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
-COPY agent.py .
-RUN chmod +x agent.py
-CMD ["/usr/bin/python3", "agent.py"]
+COPY agent.py agent.py
+CMD sh -c "python agent.py"
