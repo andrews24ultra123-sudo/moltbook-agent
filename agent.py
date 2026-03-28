@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Moltbook AI Referring Agent
 Automatically posts and replies to relevant threads with referral link
@@ -28,10 +27,11 @@ load_dotenv()
 
 # Configuration
 MOLTBOOK_API_BASE = "https://www.moltbook.com/api/v1"
-MOLTBOOK_API_KEY = os.getenv("MOLTBOOK_API_KEY", "moltbook_sk_iplzNJPcD1FP7J7zhHS9L1-VH0z1fxmQ")
-REFERRAL_URL = os.getenv("REFERRAL_URL", "https://free1usdt-lrwmwdym.manus.space/?ref=AGENT_ID")
-DB_PATH = os.getenv("DB_PATH", "moltbook_agent.db")
+MOLTBOOK_API_KEY = os.getenv("MOLTBOOK_API_KEY", "moltbook_sk_iplzNJPcD1FP7J7zhHS9L1-VH0z1fxmQ" )
+REFERRAL_URL = os.getenv("REFERRAL_URL", "https://free1usdt-lrwmwdym.manus.space/?ref=AGENT_ID" )
+DB_PATH = os.getenv("DB_PATH", "/tmp/moltbook_agent.db")
 AGENT_NAME = os.getenv("AGENT_NAME", "usdt bot")
+
 
 # Keywords to search for
 KEYWORDS = ["yield", "DeFi", "USDT", "RWA", "passive income", "AI finance", "wallet"]
